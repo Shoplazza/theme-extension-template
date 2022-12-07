@@ -1,0 +1,134 @@
+{% use 'featured-images.css' %}
+{% use 'featured-images.js' %}
+<div class="four_images">
+  <div class="row">
+    <div class="four_images-container">
+      {% include 'images_item', img: block.settings.image_url_1, link: block.settings.link_to_url_1, defaultImg: 'oss/operation/f08515a9bc38f6f52039889771d3e550.png', class: 'four_images__item-1', dataTitle: 'Image-1' %}
+      {% include 'images_item', img: block.settings.image_url_2, link: block.settings.link_to_url_2, defaultImg: 'oss/operation/0910a006fb3101bcf913804c47bf3b13.png', class: 'four_images__item-2', dataTitle: 'Image-2' %}
+      {% include 'images_item', img: block.settings.image_url_3, link: block.settings.link_to_url_3, defaultImg: 'oss/operation/5da998ec5a8a767dcec511d57e19a62a.png', class: 'four_images__item-3', dataTitle: 'Image-3' %}
+      {% include 'images_item', img: block.settings.image_url_4, link: block.settings.link_to_url_4, defaultImg: 'oss/operation/4097f63bc5e99df419b6dcd6ab1edfbb.png', class: 'four_images__item-4', dataTitle: 'Image-4' %}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "four_images",
+  "templates": ["index"],
+  "systemName": {
+    "en-US": "Multigraph-4",
+    "zh-CN": "多图-4"
+  },
+  "settings": [{
+      "content": {
+        "en-US": "Image 1",
+        "zh-CN": "图1"
+      },
+      "type": "header"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_url_1",
+      "label": "",
+      "info": {
+        "en-US": "Recommended resolution: 800x800px, fixed proportion",
+        "zh-CN": "建议尺寸：800x800px,固定比例"
+      },
+      "default": ""
+    },
+    {
+      "type": "url",
+      "id": "link_to_url_1",
+      "label": {
+        "en-US": "Link",
+        "zh-CN": "链接"
+      },
+      "is_image_link": true,
+      "default": ""
+    },
+    {
+      "content": {
+        "en-US": "Image 2",
+        "zh-CN": "图2"
+      },
+      "type": "header"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_url_2",
+      "label": "",
+      "info": {
+        "en-US": "Recommended resolution: 800x800px, fixed proportion",
+        "zh-CN": "建议尺寸：800x800px,固定比例"
+      },
+      "default": ""
+    },
+    {
+      "type": "url",
+      "id": "link_to_url_2",
+      "label": {
+        "en-US": "Link",
+        "zh-CN": "链接"
+      },
+      "is_image_link": true,
+      "default": ""
+    },
+    {
+      "content": {
+        "en-US": "Image 3",
+        "zh-CN": "图3"
+      },
+      "type": "header"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_url_3",
+      "label": "",
+      "info": {
+        "en-US": "Recommended resolution: 688x1424px, fixed proportion",
+        "zh-CN": "建议尺寸：688x1424px,固定比例"
+      },
+      "default": ""
+    },
+    {
+      "type": "url",
+      "id": "link_to_url_3",
+      "label": {
+        "en-US": "Link",
+        "zh-CN": "链接"
+      },
+      "is_image_link": true,
+      "default": ""
+    },
+    {
+      "content": {
+        "en-US": "Image 4",
+        "zh-CN": "图4"
+      },
+      "type": "header"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_url_4",
+      "label": "",
+      "info": {
+        "en-US": "Recommended resolution:1424x688px, fixed proportion",
+        "zh-CN": "建议尺寸：1424x688px,固定比例"
+      },
+      "default": ""
+    },
+    {
+      "type": "url",
+      "id": "link_to_url_4",
+      "label": {
+        "en-US": "Link",
+        "zh-CN": "链接"
+      },
+      "is_image_link": true,
+      "default": ""
+    }
+  ]
+}
+{% endschema %}
